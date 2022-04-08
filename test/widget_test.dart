@@ -102,6 +102,17 @@ void main() {
   var n = hitungnilai2(mapel1: 50, mapel2: 2);
   print(n);
   hitungnilai3(72, 100);
+
+  //final keyword => imutable / tidak bisa dirubah
+  //const final
+  //const
+  //const String mahasiswa = 'marcellia';
+  //final
+  final String mahasiswafk;
+
+  mahasiswafk = 'marcellia';
+
+  print(mahasiswafk);
 }
 
 //function
