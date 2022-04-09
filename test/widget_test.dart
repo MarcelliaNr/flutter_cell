@@ -152,6 +152,13 @@ void main() {
     print(no3);
     no3++;
   } while (no3 <= no4);
+
+  //segitiga1
+
+  //segitiga2
+  for (int i = 5; i >= 0; i--) {
+    print("*" * i);
+  }
 }
 
 //function
