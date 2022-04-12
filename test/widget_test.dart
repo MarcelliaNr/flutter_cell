@@ -197,52 +197,111 @@
 //oop
 //class
 
-class Motor {
-  String? merk;
-  String? jenis;
-  int? cc;
-  int? harga;
+// class Motor {
+//   String? merk;
+//   String? jenis;
+//   int? cc;
+//   int? harga;
 
-  //construktor
-  Motor({this.merk, this.jenis, this.cc, this.harga});
+//   //construktor
+//   Motor({this.merk, this.jenis, this.cc, this.harga});
 
-  //method
-  maju(int kecepatan) {
-    print(kecepatan.toString() + "KM/Jam");
-  }
-}
+//   //method
+//   maju(int kecepatan) {
+//     print(kecepatan.toString() + "KM/Jam");
+//   }
+// }
 
-//inheritance / pewarisan
-class Kawasaki extends Motor {
-  int? cc;
-  int? kecepatanmax;
+// //inheritance / pewarisan
+// class Kawasaki extends Motor {
+//   int? cc;
+//   int? kecepatanmax;
 
-  Kawasaki({String? merk, this.cc, this.kecepatanmax}) : super(merk: merk);
-}
+//   Kawasaki({String? merk, this.cc, this.kecepatanmax}) : super(merk: merk);
+// }
+
+// void main() {
+//   //instansiasi
+//   var m1 = Motor(merk: "Honda", jenis: "Beat", cc: 109, harga: 18);
+
+//   m1.maju(50);
+//   print(m1.merk);
+//   print(m1.jenis);
+//   print(m1.cc);
+//   print(m1.harga);
+
+//   print("==========");
+
+//   var m2 = Motor(merk: "Yamaha", jenis: "Nmax", cc: 155, harga: 33);
+
+//   m2.maju(70);
+//   print(m2.merk);
+//   print(m2.jenis);
+//   print(m2.cc);
+//   print(m2.harga);
+
+//   var k1 = Kawasaki(cc: 249, kecepatanmax: 150, merk: "kawasaki d-tracker");
+//   print("======");
+//   print(k1.cc);
+//   print(k1.kecepatanmax);
+//   print(k1.merk);
+// }
+
+import "dart:io";
 
 void main() {
-  //instansiasi
-  var m1 = Motor(merk: "Honda", jenis: "Beat", cc: 109, harga: 18);
+  // no 1
+  for (int p = 1; p <= 5; p++) {
+    for (int q = 4; q >= p; q--) {
+      stdout.write(" ");
+    }
+    for (int r = 1; r <= p; r++) {
+      stdout.write("*");
+    }
+    stdout.write("\n");
+  }
+  stdout.write(" \n");
 
-  m1.maju(50);
-  print(m1.merk);
-  print(m1.jenis);
-  print(m1.cc);
-  print(m1.harga);
+  // no2
+  for (int p = 1; p <= 5; p++) {
+    for (int q = 5; q >= p; q--) {
+      stdout.write("*");
+    }
+    stdout.write("\n");
+  }
+  stdout.write(" \n");
 
-  print("==========");
+  //no3
+  for (int i = 1; i <= 5; i++) {
+    for (int j = 1; j < i; j++) {
+      stdout.write(" ");
+    }
+    for (int k = 5; k >= i; k--) {
+      stdout.write("*");
+    }
+    stdout.write("\n");
+  }
+  stdout.write(" \n");
 
-  var m2 = Motor(merk: "Yamaha", jenis: "Nmax", cc: 155, harga: 33);
+  //no4
+  for (int i = 1; i < 3; i++) {
+    for (int j = 2; j >= i; j--) {
+      stdout.write(" ");
+    }
 
-  m2.maju(70);
-  print(m2.merk);
-  print(m2.jenis);
-  print(m2.cc);
-  print(m2.harga);
+    for (int k = 1; k < i * 2; k++) {
+      stdout.write("*");
+    }
+    stdout.write("\n");
+  }
+  for (int i = 3; i > 0; i--) {
+    for (int j = 3; j > i; j--) {
+      stdout.write(" ");
+    }
 
-  var k1 = Kawasaki(cc: 249, kecepatanmax: 150, merk: "kawasaki d-tracker");
-  print("======");
-  print(k1.cc);
-  print(k1.kecepatanmax);
-  print(k1.merk);
+    for (int k = 1; k < i * 2; k++) {
+      stdout.write("*");
+    }
+    stdout.write("\n");
+  }
 }
